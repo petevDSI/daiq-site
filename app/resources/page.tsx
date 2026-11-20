@@ -23,7 +23,7 @@ export default function Resources() {
         <div className="container">
           <div className="grid grid-2">
             {DOWNLOADS.map((d) => (
-              <div key={d.slug} className="card">
+              <div key={d.slug} id={d.slug} className="card" style={{ scrollMarginTop: 110 }}>
                 <h3>{d.title}</h3>
                 <p>{d.blurb}</p>
                 <LeadForm list={d.slug} buttonLabel="Send me the guide" source={`resource:${d.slug}`} />
