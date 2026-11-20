@@ -1,0 +1,64 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { APP_URL, CONTACT_EMAIL } from '@/lib/site'
+
+export const metadata: Metadata = {
+  title: "Who It's For",
+  description:
+    'DentalAssetIQ serves practice owners, DSOs, CPAs, and M&A advisors who need defensible dental equipment values.',
+  alternates: { canonical: '/who-its-for' },
+}
+
+const AUDIENCES: { title: string; body: string; plan: string }[] = [
+  {
+    title: 'Practice owners',
+    body: 'Before you renew insurance, apply for a loan, or talk to a buyer, know what your operatories are worth. The Solo Pro plan keeps a living inventory and a claim-ready record.',
+    plan: 'Free or Solo Pro',
+  },
+  {
+    title: 'DSOs and group practices',
+    body: 'Forecast CapEx across locations, standardize on equipment that holds value, and arrive at diligence with the schedule already built.',
+    plan: 'Group Practice or Enterprise',
+  },
+  {
+    title: 'CPAs and bookkeepers',
+    body: 'Give your dental clients a documented equipment record that supports depreciation questions, buy-sell agreements, and succession planning.',
+    plan: 'Solo Pro, or Advisor License',
+  },
+  {
+    title: 'M&A advisors and brokers',
+    body: 'Price the equipment side of a practice sale with market comps, and deliver white-labeled reports to your clients.',
+    plan: 'Advisor License',
+  },
+]
+
+export default function WhoItsFor() {
+  return (
+    <>
+      <section className="section tight hero">
+        <div className="container">
+          <p className="eyebrow">Who it&apos;s for</p>
+          <h1>If you sign off on equipment, this is for you</h1>
+        </div>
+      </section>
+      <section className="section">
+        <div className="container">
+          <div className="grid grid-2">
+            {AUDIENCES.map((a) => (
+              <div key={a.title} className="card">
+                <h3>{a.title}</h3>
+                <p>{a.body}</p>
+                <p className="meta">Best fit: {a.plan}</p>
+              </div>
+            ))}
+          </div>
+          <div className="btn-row">
+            <a className="btn btn-gold" href={`${APP_URL}/auth/signup`}>Get started free</a>
+            <Link className="btn btn-outline" href="/pricing">Compare plans</Link>
+            <a className="btn btn-outline" href={`mailto:${CONTACT_EMAIL}`}>Talk to us</a>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
