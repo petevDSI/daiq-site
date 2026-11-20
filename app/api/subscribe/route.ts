@@ -70,10 +70,14 @@ export async function POST(req: Request) {
 
   if (download) {
     subject = `Your guide: ${download.title}`
-    const file = path.join(process.cwd(), 'private-downloads', `${download.slug}.pdf`)
-    if (fs.existsSync(file)) {
-      attachments = [{ filename: `${download.slug}.pdf`, content: fs.readFileSync(file) }]
-      html = `<p>${greeting}</p><p>Your copy of <strong>${esc(download.title)}</strong> is attached.</p><p>If you want to see what your equipment is actually worth, you can scan a tag free at <a href="https://app.dentalassetiq.com/scan">app.dentalassetiq.com/scan</a>.</p><p>Pete Volk<br/>DentalAssetIQ</p>`
+    const dir = path.join(process.cwd(), 'private-downloads')
+    // Main file is <slug>.pdf; companions are <slug>--<name>.pdf and ship in the same email.
+    const files = fs.existsSync(dir)
+      ? fs.readdirSync(dir).filter((f) => f === `${download.slug}.pdf` || (f.startsWith(`${download.slug}--`) && f.endsWith('.pdf'))).sort()
+      : []
+    if (files.length > 0) {
+      attachments = files.map((f) => ({ filename: f.replace('--', '-'), content: fs.readFileSync(path.join(dir, f)) }))
+      html = `<p>${greeting}</p><p>Your copy of <strong>${esc(download.title)}</strong> is attached${files.length > 1 ? ` (${files.length} files)` : ''}.</p><p>If you want to see what your equipment is actually worth, you can scan a tag free at <a href="https://app.dentalassetiq.com/scan">app.dentalassetiq.com/scan</a>.</p><p>Pete Volk<br/>DentalAssetIQ</p>`
       message = 'Done. Your guide is on its way to your inbox.'
     } else {
       html = `<p>${greeting}</p><p>Thanks for requesting <strong>${esc(download.title)}</strong>. We will email it to you within one business day.</p><p>Pete Volk<br/>DentalAssetIQ</p>`
