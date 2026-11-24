@@ -43,7 +43,7 @@ const PLANS: Plan[] = [
       '1 location',
     ],
     cta: 'Start Solo Pro',
-    href: `${APP_URL}/auth/signup`,
+    href: `${APP_URL}/pricing`,
   },
   {
     tier: 'Group Practice',
@@ -61,7 +61,7 @@ const PLANS: Plan[] = [
       'Bulk CSV import',
     ],
     cta: 'Start Group Practice',
-    href: `${APP_URL}/auth/signup`,
+    href: `${APP_URL}/pricing`,
   },
   {
     tier: 'Enterprise',
