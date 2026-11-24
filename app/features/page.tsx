@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { APP_URL, SCAN_URL } from '@/lib/site'
+import { FEATURE_ART } from '@/components/FeatureArt'
 
 export const metadata: Metadata = {
   title: 'Features',
@@ -37,13 +38,24 @@ export default function Features() {
       <section className="section">
         <div className="container">
           <div className="grid grid-3">
-            {FEATURES.map(([t, d]) => (
-              <div key={t} className="card">
-                <h3>{t}</h3>
-                <p>{d}</p>
-              </div>
-            ))}
+            {FEATURES.map(([t, d]) => {
+              const Art = FEATURE_ART[t]
+              return (
+                <div key={t} className="card card-visual">
+                  {Art && (
+                    <div className="card-art">
+                      <Art />
+                    </div>
+                  )}
+                  <div className="card-body">
+                    <h3>{t}</h3>
+                    <p>{d}</p>
+                  </div>
+                </div>
+              )
+            })}
           </div>
+          <p className="form-note" style={{ marginTop: 14 }}>Screens shown are illustrations with sample data.</p>
           <div className="callout" style={{ marginTop: 32 }}>
             <strong>An estimate is not an appraisal.</strong> DentalAssetIQ gives you market-based
             valuations for planning, insurance review, and negotiation. Where a certified appraisal is

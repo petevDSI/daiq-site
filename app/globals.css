@@ -102,6 +102,9 @@ p + p { margin-top: 1em; }
 .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; transition: transform 0.18s ease, box-shadow 0.18s ease; }
 .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
 .card p { color: var(--muted); font-size: 0.98rem; }
+.card.card-visual { padding: 0; overflow: hidden; }
+.card-art { border-bottom: 1px solid var(--line); }
+.card-body { padding: 24px 28px 28px; }
 .card.gold { border: 2px solid var(--gold); }
 .card .price { font-family: var(--font-head), Georgia, serif; font-size: 2.3rem; color: var(--navy); margin: 8px 0 2px; }
 .card .price small { font-family: var(--font-body), sans-serif; font-size: 1rem; color: var(--muted); }
