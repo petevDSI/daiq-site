@@ -24,10 +24,10 @@ export default function Home() {
           </div>
           <div className="hero-photo">
             <img
-              src="/images/hero-operatory.jpg"
-              alt="Bright modern dental operatory with a treatment chair, delivery unit, and cabinetry"
-              width={1800}
-              height={1203}
+              src="/images/hero-office.jpg"
+              alt="Dental operatory with a treatment chair, delivery unit, wall-mounted monitor, and a laptop on a mobile cart"
+              width={966}
+              height={782}
               fetchPriority="high"
             />
             <ValueCard />
