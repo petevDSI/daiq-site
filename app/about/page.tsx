@@ -20,41 +20,31 @@ export default function About() {
         </div>
       </section>
       <section className="section">
-        <div className="founders">
-          <figure className="founder">
+        <div className="narrow prose">
+          <p>
             <Image
+              className="inline-photo left"
               src="/images/team/pete-volk.jpg"
               alt="Pete Volk, founder of Dental Strategy Institute"
               width={900}
               height={893}
               priority
             />
-            <figcaption>
-              <strong>Pete Volk</strong>
-              Founder
-            </figcaption>
-          </figure>
-          <figure className="founder susan">
+            DentalAssetIQ comes from Pete Volk and Susan Volk, RDH, co-founders of{' '}
+            <a href={DSI_URL}>Dental Strategy Institute</a>. Pete brings more than twenty-five years
+            in dental office design, equipment, and DSO strategy.
+          </p>
+          <p>
             <Image
+              className="inline-photo right"
               src="/images/team/susan-volk.jpg"
               alt="Susan Volk, RDH, co-founder of Dental Strategy Institute"
               width={1020}
               height={1020}
               priority
             />
-            <figcaption>
-              <strong>Susan Volk, RDH</strong>
-              Co-Founder
-            </figcaption>
-          </figure>
-        </div>
-        <div className="narrow prose">
-          <p>
-            DentalAssetIQ comes from Pete Volk and Susan Volk, RDH, co-founders of{' '}
-            <a href={DSI_URL}>Dental Strategy Institute</a>. Pete brings more than twenty-five years
-            in dental office design, equipment, and DSO strategy. Susan brings the clinical side as
-            a registered dental hygienist, keeping the content and the numbers grounded in how a
-            practice actually runs.
+            Susan brings the clinical side as a registered dental hygienist, keeping the content and
+            the numbers grounded in how a practice actually runs.
           </p>
           <p>
             One problem kept coming back: nobody could say, with a straight face, what the
