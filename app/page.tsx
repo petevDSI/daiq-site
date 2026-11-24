@@ -2,44 +2,72 @@ import Link from 'next/link'
 import { getAllPosts, formatDate } from '@/lib/posts'
 import { APP_URL, SCAN_URL, DSI_URL, DOWNLOADS } from '@/lib/site'
 import LeadForm from '@/components/LeadForm'
+import { ValueCard, ValueIcon, FleetIcon, ShieldIcon } from '@/components/HomeArt'
 
 export default function Home() {
   const latest = getAllPosts().slice(0, 3)
   return (
     <>
       <section className="section hero">
-        <div className="container">
-          <p className="eyebrow">Dental equipment valuation</p>
-          <h1>Point. Scan. Know what it&apos;s worth.</h1>
-          <p className="lede">
-            Scan an equipment tag and get a valuation built on 180 days of market comps. Built for
-            practice owners, DSOs, CPAs, and M&amp;A advisors who are tired of guessing.
-          </p>
-          <div className="btn-row">
-            <a className="btn btn-gold" href={SCAN_URL}>Scan a tag</a>
-            <a className="btn btn-outline" href={`${APP_URL}/auth/signup`}>Create a free account</a>
+        <div className="container hero-split hero-home">
+          <div>
+            <p className="eyebrow">Dental equipment valuation</p>
+            <h1>Point. Scan. Know what it&apos;s worth.</h1>
+            <p className="lede">
+              Scan an equipment tag and get a valuation built on 180 days of market comps. Built for
+              practice owners, DSOs, CPAs, and M&amp;A advisors who are tired of guessing.
+            </p>
+            <div className="btn-row">
+              <a className="btn btn-gold" href={SCAN_URL}>Scan a tag</a>
+              <a className="btn btn-outline" href={`${APP_URL}/auth/signup`}>Create a free account</a>
+            </div>
+          </div>
+          <div className="hero-photo">
+            <img
+              src="/images/hero-operatory.jpg"
+              alt="Bright modern dental operatory with a treatment chair, delivery unit, and cabinetry"
+              width={1800}
+              height={1203}
+              fetchPriority="high"
+            />
+            <ValueCard />
           </div>
         </div>
       </section>
 
       <section className="section">
         <div className="container">
-          <h2>Every operatory is an asset ledger nobody keeps</h2>
-          <p className="lede">
-            Chairs, lights, sterilizers, compressors, CBCT units. They sit on the balance sheet at
-            depreciated cost, in the insurance policy at a guess, and in a sale negotiation at
-            whatever the loudest person says. DentalAssetIQ puts a defensible number on each one.
-          </p>
+          <div className="split-media">
+            <div>
+              <h2>Every operatory is an asset ledger nobody keeps</h2>
+              <p className="lede">
+                Chairs, lights, sterilizers, compressors, CBCT units. They sit on the balance sheet at
+                depreciated cost, in the insurance policy at a guess, and in a sale negotiation at
+                whatever the loudest person says. DentalAssetIQ puts a defensible number on each one.
+              </p>
+            </div>
+            <img
+              className="photo-round"
+              src="/images/fleet-chair.jpg"
+              alt="Dental treatment chair and equipment in a clinic operatory"
+              width={1200}
+              height={800}
+              loading="lazy"
+            />
+          </div>
           <div className="grid grid-3" style={{ marginTop: 32 }}>
             <div className="card">
+              <ValueIcon />
               <h3>Fair market value</h3>
               <p>Valuations that start from real sales, not list prices, with a clear confidence level on every result.</p>
             </div>
             <div className="card">
+              <FleetIcon />
               <h3>Fleet health and CapEx</h3>
               <p>See what is aging out, what it will cost to replace, and plan three years ahead instead of reacting to a failure.</p>
             </div>
             <div className="card">
+              <ShieldIcon />
               <h3>Insurance and diligence</h3>
               <p>Claim-ready documentation and M&amp;A diligence reports, so nobody scrambles after a loss or in the middle of a deal.</p>
             </div>
@@ -53,7 +81,17 @@ export default function Home() {
 
       <section className="section bg-light">
         <div className="container">
-          <h2>Made for the people who sign off on equipment</h2>
+          <div className="split-media reverse">
+            <img
+              className="photo-round"
+              src="/images/advisors-team.jpg"
+              alt="Advisors and practice leaders reviewing financial documents together"
+              width={1200}
+              height={675}
+              loading="lazy"
+            />
+            <h2>Made for the people who sign off on equipment</h2>
+          </div>
           <div className="grid grid-4" style={{ marginTop: 24 }}>
             {[
               ['Practice owners', 'Know the number before an insurer, a lender, or a buyer tells you theirs.'],
@@ -115,6 +153,9 @@ export default function Home() {
             calculators for dental practice owners, DSO leaders, and advisors.
           </p>
           <LeadForm list="newsletter" buttonLabel="Subscribe" source="home" />
+          <p className="photo-credit" style={{ marginTop: 20 }}>
+            Photos via <a href="https://unsplash.com">Unsplash</a>. Valuation card shown is sample data.
+          </p>
         </div>
       </section>
     </>

@@ -169,3 +169,25 @@ textarea.input { min-height: 150px; width: 100%; flex-basis: 100%; border-radius
 .guide-preview img { position: absolute; bottom: -28px; width: 190px; height: auto; border-radius: 4px; border: 1px solid var(--line); box-shadow: 0 12px 28px rgba(13, 31, 60, 0.22); background: #fff; }
 .guide-preview .gp-page { left: calc(50% - 20px); transform: rotate(6deg); transform-origin: bottom left; }
 .guide-preview .gp-cover { left: calc(50% - 150px); transform: rotate(-3deg); transform-origin: bottom right; }
+
+/* Home hero with photo */
+.hero-split.hero-home { grid-template-columns: 1fr 1.05fr; }
+.hero-photo { position: relative; }
+.hero-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 24px; box-shadow: 0 24px 60px rgba(13, 31, 60, 0.18); }
+.value-card { position: absolute; left: -28px; bottom: -28px; width: 250px; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; box-shadow: 0 18px 40px rgba(13, 31, 60, 0.18); }
+.value-card p { margin: 0; }
+.vc-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-deep); }
+.vc-item { font-size: 0.85rem; color: var(--muted); margin-top: 4px !important; }
+.vc-value { font-family: var(--font-head), Georgia, serif; font-size: 1.55rem; color: var(--navy); margin: 2px 0 4px !important; line-height: 1.2; }
+.vc-meta { font-size: 0.78rem; color: var(--muted); }
+.vc-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #2f8f6b; margin-right: 4px; }
+@media (max-width: 860px) { .hero-split.hero-home { grid-template-columns: 1fr; } .value-card { left: 12px; bottom: -22px; } .hero-photo { margin-bottom: 24px; } }
+
+/* Photo + text rows, icons */
+.split-media { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 44px; align-items: center; }
+.split-media.reverse { grid-template-columns: 0.9fr 1.1fr; margin-bottom: 8px; }
+.split-media h2 { margin-bottom: 0; }
+.photo-round { width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow); object-fit: cover; }
+@media (max-width: 860px) { .split-media, .split-media.reverse { grid-template-columns: 1fr; gap: 24px; } }
+.card .icon { display: block; margin-bottom: 14px; }
+.photo-credit { font-size: 0.78rem; color: var(--muted); }
