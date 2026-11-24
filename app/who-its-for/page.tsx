@@ -58,10 +58,10 @@ export default function WhoItsFor() {
           </div>
           <div className="hero-art">
             <img
-              src="/images/audience-hero.svg"
+              src="/images/audience-hero.webp"
               alt="Four audiences who sign off on equipment: practice owners, DSOs, CPAs, and M&A advisors"
-              width={480}
-              height={440}
+              width={1200}
+              height={857}
               style={{ display: 'block', width: '100%', height: 'auto' }}
             />
           </div>
