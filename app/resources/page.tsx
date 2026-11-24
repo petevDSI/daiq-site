@@ -24,6 +24,10 @@ export default function Resources() {
           <div className="grid grid-2">
             {DOWNLOADS.map((d) => (
               <div key={d.slug} id={d.slug} className="card" style={{ scrollMarginTop: 110 }}>
+                <div className="guide-preview" aria-hidden="true">
+                  <img className="gp-page" src={`/guides/${d.slug}-page.jpg`} alt="" width={280} height={363} loading="lazy" />
+                  <img className="gp-cover" src={`/guides/${d.slug}-cover.jpg`} alt="" width={280} height={363} loading="lazy" />
+                </div>
                 <h3>{d.title}</h3>
                 <p>{d.blurb}</p>
                 <LeadForm list={d.slug} buttonLabel="Send me the guide" source={`resource:${d.slug}`} />
