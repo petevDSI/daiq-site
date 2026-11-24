@@ -5,7 +5,7 @@ import LeadForm from '@/components/LeadForm'
 export const metadata: Metadata = {
   title: 'Free Dental Equipment Guides and Checklists',
   description:
-    'Free worksheets and checklists for dental equipment replacement, partner buyouts, CPA documentation, DSO negotiation, and Colorado DSO compliance.',
+    'Free worksheets and checklists for dental equipment replacement, partner buyouts, CPA documentation, DSO negotiation, DSO acquisition preparation, and Colorado DSO compliance.',
   alternates: { canonical: '/resources' },
 }
 

@@ -20,7 +20,7 @@ export interface Download {
   blurb: string
 }
 
-// The five free guides that were offered on Kajabi.
+// The five free guides that were offered on Kajabi, plus the DSO Acquisition Equipment Checklist.
 export const DOWNLOADS: Download[] = [
   {
     slug: 'equipment-replacement-decision-worksheet',
@@ -46,5 +46,10 @@ export const DOWNLOADS: Download[] = [
     slug: 'colorado-dso-equipment-compliance-checklist',
     title: 'Colorado DSO Equipment Compliance Checklist',
     blurb: 'An equipment valuation checklist for DSOs working under the new Colorado rules.',
+  },
+  {
+    slug: 'dso-acquisition-equipment-checklist',
+    title: 'DSO Acquisition Equipment Documentation Checklist',
+    blurb: 'A 29-item checklist of everything a DSO buyer will ask about your equipment.',
   },
 ]
