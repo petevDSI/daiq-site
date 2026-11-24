@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { APP_URL, CONTACT_EMAIL } from '@/lib/site'
+import { AUDIENCE_ART, AudienceHero } from '@/components/AudienceArt'
 
 export const metadata: Metadata = {
   title: "Who It's For",
@@ -36,22 +37,46 @@ export default function WhoItsFor() {
   return (
     <>
       <section className="section tight hero">
-        <div className="container">
-          <p className="eyebrow">Who it&apos;s for</p>
-          <h1>If you sign off on equipment, this is for you</h1>
+        <div className="container hero-split">
+          <div>
+            <p className="eyebrow">Who it&apos;s for</p>
+            <h1>If you sign off on equipment, this is for you</h1>
+            <p className="lede">
+              Owners, DSOs, CPAs, and advisors all need the same thing: a defensible number for what
+              the equipment is worth today.
+            </p>
+            <div className="btn-row">
+              <a className="btn btn-gold" href={`${APP_URL}/auth/signup`}>Get started free</a>
+              <Link className="btn btn-outline" href="/pricing">Compare plans</Link>
+            </div>
+          </div>
+          <div className="hero-art">
+            <AudienceHero />
+          </div>
         </div>
       </section>
       <section className="section">
         <div className="container">
           <div className="grid grid-2">
-            {AUDIENCES.map((a) => (
-              <div key={a.title} className="card">
-                <h3>{a.title}</h3>
-                <p>{a.body}</p>
-                <p className="meta">Best fit: {a.plan}</p>
-              </div>
-            ))}
+            {AUDIENCES.map((a) => {
+              const Art = AUDIENCE_ART[a.title]
+              return (
+                <div key={a.title} className="card card-visual">
+                  {Art && (
+                    <div className="card-art">
+                      <Art />
+                    </div>
+                  )}
+                  <div className="card-body">
+                    <h3>{a.title}</h3>
+                    <p>{a.body}</p>
+                    <p className="meta">Best fit: {a.plan}</p>
+                  </div>
+                </div>
+              )
+            })}
           </div>
+          <p className="form-note" style={{ marginTop: 14 }}>Screens shown are illustrations with sample data.</p>
           <div className="btn-row">
             <a className="btn btn-gold" href={`${APP_URL}/auth/signup`}>Get started free</a>
             <Link className="btn btn-outline" href="/pricing">Compare plans</Link>

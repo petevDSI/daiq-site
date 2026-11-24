@@ -105,6 +105,9 @@ p + p { margin-top: 1em; }
 .card.card-visual { padding: 0; overflow: hidden; }
 .card-art { border-bottom: 1px solid var(--line); }
 .card-body { padding: 24px 28px 28px; }
+.hero-split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; }
+.hero-split .hero-art { max-width: 440px; justify-self: end; width: 100%; }
+@media (max-width: 860px) { .hero-split { grid-template-columns: 1fr; gap: 32px; } .hero-split .hero-art { justify-self: center; } }
 .card.gold { border: 2px solid var(--gold); }
 .card .price { font-family: var(--font-head), Georgia, serif; font-size: 2.3rem; color: var(--navy); margin: 8px 0 2px; }
 .card .price small { font-family: var(--font-body), sans-serif; font-size: 1rem; color: var(--muted); }
