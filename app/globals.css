@@ -191,3 +191,12 @@ textarea.input { min-height: 150px; width: 100%; flex-basis: 100%; border-radius
 @media (max-width: 860px) { .split-media, .split-media.reverse { grid-template-columns: 1fr; gap: 24px; } }
 .card .icon { display: block; margin-bottom: 14px; }
 .photo-credit { font-size: 0.78rem; color: var(--muted); }
+
+/* About page: founders */
+.founders { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 760px; margin: 0 auto 8px; padding: 0 24px; }
+.founder { margin: 0; text-align: center; }
+.founder img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
+.founder.susan img { object-position: 38% 30%; }
+.founder figcaption { margin-top: 12px; font-size: 0.95rem; color: var(--muted); }
+.founder figcaption strong { display: block; color: var(--navy); font-size: 1.05rem; }
+@media (max-width: 560px) { .founders { grid-template-columns: 1fr; max-width: 360px; } }

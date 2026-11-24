@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { DSI_URL, APP_URL } from '@/lib/site'
 
 export const metadata: Metadata = {
@@ -19,12 +20,45 @@ export default function About() {
         </div>
       </section>
       <section className="section">
+        <div className="founders">
+          <figure className="founder">
+            <Image
+              src="/images/team/pete-volk.jpg"
+              alt="Pete Volk, founder of Dental Strategy Institute"
+              width={900}
+              height={893}
+              priority
+            />
+            <figcaption>
+              <strong>Pete Volk</strong>
+              Founder
+            </figcaption>
+          </figure>
+          <figure className="founder susan">
+            <Image
+              src="/images/team/susan-volk.jpg"
+              alt="Susan Volk, RDH, co-founder of Dental Strategy Institute"
+              width={1020}
+              height={1020}
+              priority
+            />
+            <figcaption>
+              <strong>Susan Volk, RDH</strong>
+              Co-Founder
+            </figcaption>
+          </figure>
+        </div>
         <div className="narrow prose">
           <p>
-            DentalAssetIQ comes from Pete Volk, founder of{' '}
-            <a href={DSI_URL}>Dental Strategy Institute</a>. After more than two decades in dental
-            office design, equipment, and DSO strategy, one problem kept coming back: nobody could
-            say, with a straight face, what the equipment in a practice was actually worth.
+            DentalAssetIQ comes from Pete Volk and Susan Volk, RDH, co-founders of{' '}
+            <a href={DSI_URL}>Dental Strategy Institute</a>. Pete brings more than twenty-five years
+            in dental office design, equipment, and DSO strategy. Susan brings the clinical side as
+            a registered dental hygienist, keeping the content and the numbers grounded in how a
+            practice actually runs.
+          </p>
+          <p>
+            One problem kept coming back: nobody could say, with a straight face, what the
+            equipment in a practice was actually worth.
           </p>
           <p>
             Owners guessed. Insurers guessed lower. Buyers guessed lowest. Everyone argued from list
