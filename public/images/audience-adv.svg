@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="198 264 340 170" role="img" aria-label="Bound CVR valuation report with a chart, signature, and check mark" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="navyg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b3f61"/><stop offset="1" stop-color="#0d1f3c"/></linearGradient>
+    <linearGradient id="goldg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9bb62"/><stop offset="1" stop-color="#b8953a"/></linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0d1f3c" flood-opacity="0.16"/></filter>
+  </defs>
+  <rect x="198.0" y="264.0" width="340.0" height="170.0" fill="#f4f8fc"/>
+  <circle cx="514.2" cy="255.5" r="68.0" fill="#e6f0f7"/>
+  <circle cx="211.6" cy="445.9" r="59.49999999999999" fill="#fbf5e6"/>
+  <g transform="translate(6 8)">
+  <!-- ===== M&A advisors: CVR report ===== -->
+  <g filter="url(#sh)">
+    <rect x="320" y="272" width="116" height="144" rx="8" fill="#fff" stroke="#c9d1dc"/>
+    <rect x="300" y="264" width="122" height="148" rx="8" fill="#fff" stroke="#0d1f3c" stroke-width="2"/>
+  </g>
+  <rect x="292" y="264" width="20" height="148" rx="8" fill="url(#navyg)"/>
+  <g fill="#c9a84c"><rect x="288" y="276" width="12" height="4" rx="2"/><rect x="288" y="296" width="12" height="4" rx="2"/><rect x="288" y="316" width="12" height="4" rx="2"/><rect x="288" y="336" width="12" height="4" rx="2"/><rect x="288" y="356" width="12" height="4" rx="2"/><rect x="288" y="376" width="12" height="4" rx="2"/></g>
+  <text x="322" y="284" font-size="8.5" font-weight="700" fill="#a8872f" letter-spacing="1.2">VALUATION</text>
+  <text x="322" y="303" font-family="Georgia, serif" font-size="15" font-weight="700" fill="#0d1f3c">CVR report</text>
+  <rect x="322" y="310" width="84" height="3" rx="1.5" fill="#c9a84c"/>
+  <g><rect x="326" y="354" width="16" height="22" rx="2" fill="#2b3f61"/><rect x="350" y="340" width="16" height="36" rx="2" fill="#a0522d"/><rect x="374" y="324" width="16" height="52" rx="2" fill="#c9a84c"/><path d="M322 377 H402" stroke="#c9d1dc" stroke-width="1.5"/></g>
+  <path d="M324 396 q8 -14 14 -4 t12 -2 t14 4 t12 -4" fill="none" stroke="#2b3f61" stroke-width="1.8" stroke-linecap="round"/>
+  <g filter="url(#sh)"><circle cx="420" cy="398" r="17" fill="url(#goldg)" stroke="#fbf5e6" stroke-width="3"/></g>
+  <path d="M412 398 l6 6 l11 -12" fill="none" stroke="#0d1f3c" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  </g>
+
+</svg>

@@ -1,13 +1,19 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { APP_URL, CONTACT_EMAIL } from '@/lib/site'
-import { AUDIENCE_ART } from '@/components/AudienceArt'
 
 export const metadata: Metadata = {
   title: "Who It's For",
   description:
     'DentalAssetIQ serves practice owners, DSOs, CPAs, and M&A advisors who need defensible dental equipment values.',
   alternates: { canonical: '/who-its-for' },
+}
+
+const CARD_ART: Record<string, string> = {
+  'Practice owners': '/images/audience-chair.svg',
+  'DSOs and group practices': '/images/audience-dso.svg',
+  'CPAs and bookkeepers': '/images/audience-cpa.svg',
+  'M&A advisors and brokers': '/images/audience-adv.svg',
 }
 
 const AUDIENCES: { title: string; body: string; plan: string }[] = [
@@ -65,12 +71,12 @@ export default function WhoItsFor() {
         <div className="container">
           <div className="grid grid-2">
             {AUDIENCES.map((a) => {
-              const Art = AUDIENCE_ART[a.title]
+              const art = CARD_ART[a.title]
               return (
                 <div key={a.title} className="card card-visual">
-                  {Art && (
+                  {art && (
                     <div className="card-art">
-                      <Art />
+                      <img src={art} alt="" width={400} height={200} loading="lazy" style={{ display: 'block', width: '100%', height: 'auto' }} />
                     </div>
                   )}
                   <div className="card-body">
