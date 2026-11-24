@@ -48,8 +48,8 @@ export default function Home() {
             </div>
             <img
               className="photo-round"
-              src="/images/fleet-chair.jpg"
-              alt="Dental treatment chair and equipment in a clinic operatory"
+              src="/images/xray-imaging.jpg"
+              alt="Dentist reviewing 3D imaging and X-ray scans on a light box"
               width={1200}
               height={800}
               loading="lazy"
