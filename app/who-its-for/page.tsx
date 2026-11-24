@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 }
 
 const CARD_ART: Record<string, string> = {
-  'Practice owners': '/images/audience-chair.svg',
-  'DSOs and group practices': '/images/audience-dso.svg',
-  'CPAs and bookkeepers': '/images/audience-cpa.svg',
-  'M&A advisors and brokers': '/images/audience-adv.svg',
+  'Practice owners': '/images/audience-chair.webp',
+  'DSOs and group practices': '/images/audience-dso.webp',
+  'CPAs and bookkeepers': '/images/audience-cpa.webp',
+  'M&A advisors and brokers': '/images/audience-adv.webp',
 }
 
 const AUDIENCES: { title: string; body: string; plan: string }[] = [
@@ -76,7 +76,7 @@ export default function WhoItsFor() {
                 <div key={a.title} className="card card-visual">
                   {art && (
                     <div className="card-art">
-                      <img src={art} alt="" width={400} height={200} loading="lazy" style={{ display: 'block', width: '100%', height: 'auto' }} />
+                      <img src={art} alt="" width={800} height={534} loading="lazy" style={{ display: 'block', width: '100%', height: 'auto' }} />
                     </div>
                   )}
                   <div className="card-body">
