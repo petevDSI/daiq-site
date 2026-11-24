@@ -48,10 +48,10 @@ export default function Home() {
             </div>
             <img
               className="photo-round"
-              src="/images/xray-imaging.jpg"
-              alt="Dentist reviewing 3D imaging and X-ray scans on a light box"
-              width={1200}
-              height={800}
+              src="/images/operatory-imaging.jpg"
+              alt="Dental operatory with a wall-mounted X-ray unit, chair, and imaging monitor"
+              width={1400}
+              height={744}
               loading="lazy"
             />
           </div>
