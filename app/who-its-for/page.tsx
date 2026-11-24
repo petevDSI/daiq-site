@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { APP_URL, CONTACT_EMAIL } from '@/lib/site'
-import { AUDIENCE_ART, AudienceHero } from '@/components/AudienceArt'
+import { AUDIENCE_ART } from '@/components/AudienceArt'
 
 export const metadata: Metadata = {
   title: "Who It's For",
@@ -51,7 +51,13 @@ export default function WhoItsFor() {
             </div>
           </div>
           <div className="hero-art">
-            <AudienceHero />
+            <img
+              src="/images/audience-hero.svg"
+              alt="Four audiences who sign off on equipment: practice owners, DSOs, CPAs, and M&A advisors"
+              width={480}
+              height={440}
+              style={{ display: 'block', width: '100%', height: 'auto' }}
+            />
           </div>
         </div>
       </section>
